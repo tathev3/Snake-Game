@@ -1,8 +1,8 @@
 CXX		  := g++
 CXX_FLAGS := -Wall -Wextra -Wno-unused-parameter -std=c++17 -ggdb
 
-BIN		:= bin
-SRC		:= src
+BIN		:= headers
+SRC		:= sources
 INCLUDE	:= include
 LIB		:= lib
 
