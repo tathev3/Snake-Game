@@ -1,9 +1,9 @@
 CXX		  := g++
 CXX_FLAGS := -Wall -Wextra -Wno-unused-parameter -std=c++17 -ggdb
 
-BIN		:= headers
+BIN		:= bin
 SRC		:= sources
-INCLUDE	:= include
+INCLUDE	:= headers
 LIB		:= lib
 
 LIBRARIES	:= -lsfml-graphics -lsfml-window -lsfml-system
