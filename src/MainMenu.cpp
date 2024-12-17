@@ -16,7 +16,7 @@ MainMenu::~MainMenu()
 
 void MainMenu::Init()
 {
-    m_context->m_assets->AddFont(MAIN_FONT, "assets/fonts/Pacifico-Regular.otf");
+    m_context->m_assets->AddFont(MAIN_FONT, "assets/fonts/Pacifico-Regular.ttf");
 
     // Title
     m_gameTitle.setFont(m_context->m_assets->GetFont(MAIN_FONT));

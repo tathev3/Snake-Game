@@ -4,8 +4,8 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "AssetMan.hpp"
-#include "StateMan.hpp"
+#include "AssetManager.hpp"
+#include "StateManager.hpp"
 
 enum AssetID
 {

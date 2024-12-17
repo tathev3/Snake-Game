@@ -1,4 +1,4 @@
-#include "AssetMan.hpp"
+#include "AssetManager.hpp"
 #include <iostream>
 
 Engine::AssetMan::AssetMan()

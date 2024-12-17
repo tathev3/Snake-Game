@@ -18,7 +18,7 @@ void PauseGame::Init()
     m_pauseTitle.setString("Paused");
     m_pauseTitle.setOrigin(m_pauseTitle.getLocalBounds().width / 2,
                            m_pauseTitle.getLocalBounds().height / 2);
-    m_pauseTitle.setPosition(m_context->m_window->getSize().x / 2,
+    m_pauseTitle.setPosition(m_context->m_window->getSize().x / 2.2,
                              m_context->m_window->getSize().y / 2);
 }
 
