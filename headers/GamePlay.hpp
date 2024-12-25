@@ -10,7 +10,7 @@
 #include "State.hpp"
 #include "Snake.hpp"
 
-class GamePlay : public Engine::State
+class GamePlay : public State
 {
 public:
     GamePlay(std::shared_ptr<Context> &context);
@@ -38,3 +38,5 @@ private:
 
     bool m_isPaused;
 };
+
+

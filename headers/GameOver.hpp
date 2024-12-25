@@ -7,7 +7,7 @@
 #include "State.hpp"
 #include "Game.hpp"
 
-class GameOver : public Engine::State
+class GameOver : public State
 {
 public:
     GameOver(std::shared_ptr<Context> &context);
@@ -30,3 +30,4 @@ private:
     bool m_isExitButtonSelected;
     bool m_isExitButtonPressed;
 };
+

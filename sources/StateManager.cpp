@@ -1,14 +1,14 @@
 #include "StateManager.hpp"
 
-Engine::StateMan::StateMan() : m_add(false), m_replace(false), m_remove(false), m_removeAll(false)
+StateMan::StateMan() : m_add(false), m_replace(false), m_remove(false), m_removeAll(false)
 {
 }
 
-Engine::StateMan::~StateMan()
+StateMan::~StateMan()
 {
 }
 
-void Engine::StateMan::Add(std::unique_ptr<State> toAdd, bool replace)
+void StateMan::Add(std::unique_ptr<State> toAdd, bool replace)
 {
     m_add = true;
     m_newState = std::move(toAdd);
@@ -16,18 +16,18 @@ void Engine::StateMan::Add(std::unique_ptr<State> toAdd, bool replace)
     m_replace = replace;
 }
 
-void Engine::StateMan::PopCurrent()
+void StateMan::PopCurrent()
 {
     m_remove = true;
 }
 
-void Engine::StateMan::PopAll()
+void StateMan::PopAll()
 {
     m_removeAll = true;
     m_remove = false;
 }
 
-void Engine::StateMan::ProcessStateChange()
+void StateMan::ProcessStateChange()
 {
     if (m_removeAll)
     {
@@ -69,12 +69,12 @@ void Engine::StateMan::ProcessStateChange()
     }
 }
 
-std::unique_ptr<Engine::State> &Engine::StateMan::GetCurrent()
+std::unique_ptr<State> &StateMan::GetCurrent()
 {
     return m_stateStack.top();
 }
 
-bool Engine::StateMan::IsEmpty() const
+bool StateMan::IsEmpty() const
 {
     return m_stateStack.empty();
 }

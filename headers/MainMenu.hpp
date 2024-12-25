@@ -7,7 +7,7 @@
 #include "State.hpp"
 #include "Game.hpp"
 
-class MainMenu : public Engine::State
+class MainMenu : public State
 {
 private:
     std::shared_ptr<Context> m_context;
@@ -30,3 +30,4 @@ public:
     void Update(const sf::Time& deltaTime) override;
     void Draw() override;
 };
+

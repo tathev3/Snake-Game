@@ -7,7 +7,7 @@
 #include "State.hpp"
 #include "Game.hpp"
 
-class PauseGame : public Engine::State
+class PauseGame : public State
 {
 public:
     PauseGame(std::shared_ptr<Context> &context);

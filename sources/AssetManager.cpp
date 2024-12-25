@@ -1,15 +1,15 @@
 #include "AssetManager.hpp"
 #include <iostream>
 
-Engine::AssetMan::AssetMan()
+AssetMan::AssetMan()
 {
 }
 
-Engine::AssetMan::~AssetMan()
+AssetMan::~AssetMan()
 {
 }
 
-void Engine::AssetMan::AddTexture(int id, const std::string &filePath, bool wantRepeated)
+void AssetMan::AddTexture(int id, const std::string &filePath, bool wantRepeated)
 {
     auto texture = std::make_unique<sf::Texture>();
 
@@ -20,7 +20,7 @@ void Engine::AssetMan::AddTexture(int id, const std::string &filePath, bool want
     }
 }
 
-void Engine::AssetMan::AddFont(int id, const std::string &filePath)
+void AssetMan::AddFont(int id, const std::string &filePath)
 {
     try {
         auto font = std::make_unique<sf::Font>();
@@ -35,12 +35,12 @@ void Engine::AssetMan::AddFont(int id, const std::string &filePath)
     }
 }
 
-const sf::Texture &Engine::AssetMan::GetTexture(int id) const
+const sf::Texture &AssetMan::GetTexture(int id) const
 {
     return *(m_textures.at(id).get());
 }
 
-const sf::Font &Engine::AssetMan::GetFont(int id) const
+const sf::Font &AssetMan::GetFont(int id) const
 {
     return *(m_fonts.at(id).get());
 }
